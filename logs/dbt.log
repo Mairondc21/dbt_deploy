@@ -1,0 +1,34 @@
+[0m18:59:47.313830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002298A47FFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002298E0FB1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002298E0FA3F0>]}
+
+
+============================== 18:59:47.336828 | a2dbf7f6-6d4f-4647-b10c-42ef7cbf0e65 ==============================
+[0m18:59:47.336828 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:59:47.337829 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mairon\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m19:00:02.618630 [error] [MainThread]: Encountered an error:
+
+[0m19:00:02.620629 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\Projetos_Programação\jornada_de_dados\dbt\dbt_deploy\.venv\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projetos_Programação\jornada_de_dados\dbt\dbt_deploy\.venv\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projetos_Programação\jornada_de_dados\dbt\dbt_deploy\.venv\Lib\site-packages\dbt\cli\main.py", line 470, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "D:\Projetos_Programação\jornada_de_dados\dbt\dbt_deploy\.venv\Lib\site-packages\dbt\task\init.py", line 325, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projetos_Programação\jornada_de_dados\dbt\dbt_deploy\.venv\Lib\site-packages\dbt\task\init.py", line 279, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projetos_Programação\jornada_de_dados\dbt\dbt_deploy\.venv\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projetos_Programação\jornada_de_dados\dbt\dbt_deploy\.venv\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m19:00:02.623628 [debug] [MainThread]: Command `dbt init` failed at 19:00:02.623628 after 15.42 seconds
+[0m19:00:02.624629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002298A47FFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002298E2CBA70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002298E2CBD40>]}
+[0m19:00:02.624629 [debug] [MainThread]: Flushing usage events
